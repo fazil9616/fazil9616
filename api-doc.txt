@@ -1,0 +1,24 @@
+1. Check for subscription available 
+url: localhost/apptest/api/subscription.php
+method: POST
+Request JSON parameter: 
+{"user_id":"fkhan961","auth_key":"3a0baac5c871336827f6f73dfbf5fdc0","action_type":"subscription_status","plan_id":"0"}
+
+Response: 
+{"status":"1","response_data":{"subscription":"disable","subscription_data":[{"id":"2","user_id":"42","pl_id":"1","payment_date":"2021-09-08","next_payment_date":"2021-09-15","pl_rate":"500","status":"1","create_date":"2021-09-08"}]},"response_message":"Subscription
+available","response_code":"200"}
+
+2. Subscription submit by apps user
+url: localhost/apptest/api/subscription.php
+method: POST
+Request JSON parameter: 
+{"user_id":"fkhan961","auth_key":"3a0baac5c871336827f6f73dfbf5fdc0","action_type":"subscription_submit","plan_id":"1"}
+
+Response: 
+{"status":"1","response_data":{"subscription":"Plan subscription succefully
+done","subscription_data":[{"id":"1","name":"Weekly Subscription","type":"weekly","rate":"500","desc":"Weekly
+Subscription,\r\nWeekly Subscription","status":"1","create_date":"2021-09-08"}]},"response_message":"Subscription
+done","response_code":"200"}
+
+
+ 
